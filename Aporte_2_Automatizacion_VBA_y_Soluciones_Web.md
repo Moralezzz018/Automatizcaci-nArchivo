@@ -38,6 +38,8 @@ La solución se ejecuta localmente en Excel, utilizando hojas estructuradas como 
 
 El desarrollo siguió un enfoque incremental orientado a necesidades reales del área de soporte. Primero se analizaron las tareas repetitivas y los puntos de error en la actualización manual de inventarios. Posteriormente, se diseñaron formularios para capturar datos, se programaron rutinas modulares para búsquedas y guardado, se agregaron validaciones y se incorporaron reportes exportables. Finalmente, se realizaron pruebas funcionales sobre los flujos de inventario, préstamos y reportes.
 
+La metodología puede describirse en cinco etapas: análisis de requisitos a partir de tickets y observación directa; prototipado de formularios en el editor de VBA; programación modular separando formularios, reportes y bitácora; pruebas unitarias/manuales sobre funciones críticas como validación de fechas, generación de códigos, filtros y exportación; y despliegue mediante la importación de archivos `.frm` y `.bas` dentro de un libro de Excel habilitado para macros.
+
 La estructura del proyecto VBA utiliza:
 
 - **UserForms** para presentar interfaces gráficas y reducir la manipulación directa de hojas.
@@ -50,6 +52,8 @@ La estructura del proyecto VBA utiliza:
 - **Protección y desprotección de hojas** en operaciones críticas de escritura.
 
 El uso de arreglos en memoria permitió mejorar el rendimiento de las búsquedas, evitando recorrer celda por celda la hoja de cálculo. Esto es relevante en inventarios con crecimiento continuo, donde la respuesta del formulario debe mantenerse fluida para no afectar la atención de tickets.
+
+Respecto a los componentes web, se identificó una arquitectura de consumo cliente-servidor desde Excel: el cliente VBA abre recursos externos mediante `FollowHyperlink`, mientras que los servicios remotos, como Power BI y los portales de garantía de fabricantes, atienden la consulta desde el navegador. No se evidencia conexión directa a una API ni a una base de datos web desde el código analizado; la fuente principal de datos permanece en tablas locales de Excel.
 
 **Fragmento técnico 1. Registro auditable de cambios**
 

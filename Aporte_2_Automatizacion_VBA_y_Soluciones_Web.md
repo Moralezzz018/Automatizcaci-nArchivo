@@ -1,61 +1,61 @@
-# Aporte 2: AutomatizaciÛn de procesos mediante VBA y soluciones web
+# Aporte 2: Automatizaci√≥n de procesos mediante VBA y soluciones web
 
 ## Antecedentes
 
-Durante la pr·ctica profesional supervisada en Alimentos Maravilla de Honduras S.A., se identificÛ que el ·rea de soporte e infraestructura tecnolÛgica realizaba m˙ltiples actividades administrativas mediante hojas de c·lculo manipuladas de forma manual. Entre estas tareas se encontraban el registro de equipos, la actualizaciÛn de estados de inventario, el control de prÈstamos temporales, la consulta de garantÌas, la generaciÛn de reportes y la revisiÛn de equipos disponibles para sustituciÛn o soporte.
+Durante la pr√°ctica profesional supervisada en Alimentos Maravilla de Honduras S.A., se identific√≥ que el √°rea de soporte e infraestructura tecnol√≥gica realizaba m√∫ltiples actividades administrativas mediante hojas de c√°lculo manipuladas de forma manual. Entre estas tareas se encontraban el registro de equipos, la actualizaci√≥n de estados de inventario, el control de pr√©stamos temporales, la consulta de garant√≠as, la generaci√≥n de reportes y la revisi√≥n de equipos disponibles para sustituci√≥n o soporte.
 
-Estas actividades eran propensas a inconsistencias por digitaciÛn manual, duplicidad de registros, pÈrdida de trazabilidad y retrasos en la atenciÛn de tickets de soporte. En una empresa industrial y alimentaria, donde los equipos inform·ticos apoyan operaciones administrativas, producciÛn, distribuciÛn y control interno, la disponibilidad de informaciÛn confiable sobre activos tecnolÛgicos resulta necesaria para tomar decisiones oportunas y reducir interrupciones operativas.
+Estas actividades eran propensas a inconsistencias por digitaci√≥n manual, duplicidad de registros, p√©rdida de trazabilidad y retrasos en la atenci√≥n de tickets de soporte. En una empresa industrial y alimentaria, donde los equipos inform√°ticos apoyan operaciones administrativas, producci√≥n, distribuci√≥n y control interno, la disponibilidad de informaci√≥n confiable sobre activos tecnol√≥gicos resulta necesaria para tomar decisiones oportunas y reducir interrupciones operativas.
 
-Las oportunidades de mejora se identificaron a partir de la observaciÛn directa de tareas repetitivas, el an·lisis de solicitudes de usuarios y la revisiÛn de tickets relacionados con inventario, prÈstamos de equipo, verificaciÛn de garantÌa y elaboraciÛn de reportes. A partir de esa necesidad, el practicante implementÛ automatizaciones en Microsoft Excel mediante VBA, apoyadas por formularios de usuario, tablas estructuradas y enlaces hacia servicios web externos.
+Las oportunidades de mejora se identificaron a partir de la observaci√≥n directa de tareas repetitivas, el an√°lisis de solicitudes de usuarios y la revisi√≥n de tickets relacionados con inventario, pr√©stamos de equipo, verificaci√≥n de garant√≠a y elaboraci√≥n de reportes. A partir de esa necesidad, el practicante implement√≥ automatizaciones en Microsoft Excel mediante VBA, apoyadas por formularios de usuario, tablas estructuradas y enlaces hacia servicios web externos.
 
 ## Objetivo
 
-El objetivo tÈcnico principal fue automatizar y estandarizar la gestiÛn del inventario tecnolÛgico, los prÈstamos de equipos y la generaciÛn de reportes, reduciendo la intervenciÛn manual del personal de IT, minimizando errores humanos en la manipulaciÛn de planillas y facilitando la consulta centralizada de informaciÛn mediante formularios VBA e integraciones web de apoyo.
+El objetivo t√©cnico principal fue automatizar y estandarizar la gesti√≥n del inventario tecnol√≥gico, los pr√©stamos de equipos y la generaci√≥n de reportes, reduciendo la intervenci√≥n manual del personal de IT, minimizando errores humanos en la manipulaci√≥n de planillas y facilitando la consulta centralizada de informaci√≥n mediante formularios VBA e integraciones web de apoyo.
 
-De forma especÌfica, la soluciÛn buscÛ:
+De forma espec√≠fica, la soluci√≥n busc√≥:
 
 - Registrar y actualizar equipos de inventario con validaciones de datos obligatorios.
-- Controlar prÈstamos de equipos disponibles y actualizar autom·ticamente sus estados.
-- Generar reportes filtrados por agencia, estado, tipo de equipo y garantÌa.
-- Exportar informaciÛn a PDF o Excel para evidencia administrativa.
-- Mantener una bit·cora de cambios que permitiera auditar acciones crÌticas.
-- Facilitar la consulta de garantÌas y tableros mediante enlaces web desde el formulario.
+- Controlar pr√©stamos de equipos disponibles y actualizar autom√°ticamente sus estados.
+- Generar reportes filtrados por agencia, estado, tipo de equipo y garant√≠a.
+- Exportar informaci√≥n a PDF o Excel para evidencia administrativa.
+- Mantener una bit√°cora de cambios que permitiera auditar acciones cr√≠ticas.
+- Facilitar la consulta de garant√≠as y tableros mediante enlaces web desde el formulario.
 
 ## Alcance
 
-El alcance funcional de la soluciÛn abarca una automatizaciÛn local en Excel desarrollada con VBA, estructurada alrededor de formularios (`UserForms`), mÛdulos est·ndar y tablas de datos. Los archivos analizados corresponden a:
+El alcance funcional de la soluci√≥n abarca una automatizaci√≥n local en Excel desarrollada con VBA, estructurada alrededor de formularios (`UserForms`), m√≥dulos est√°ndar y tablas de datos. Los archivos analizados corresponden a:
 
-- `frmGeneralCorregido.frm`: formulario principal para inventario, prÈstamos, b˙squeda, validaciÛn de fechas, gestiÛn de equipos fuera de uso, consulta de garantÌas y acceso a dashboard.
-- `FormDisponibles.frm`: formulario para listar, filtrar y seleccionar equipos disponibles para prÈstamo.
-- `FormReporte.frm`: formulario de reportes con filtros combinados y exportaciÛn a PDF o Excel.
-- `ModuloBitacora.bas`: mÛdulo est·ndar para bit·cora de cambios, control informativo de acceso multiusuario y actualizaciÛn de actividad.
+- `frmGeneralCorregido.frm`: formulario principal para inventario, pr√©stamos, b√∫squeda, validaci√≥n de fechas, gesti√≥n de equipos fuera de uso, consulta de garant√≠as y acceso a dashboard.
+- `FormDisponibles.frm`: formulario para listar, filtrar y seleccionar equipos disponibles para pr√©stamo.
+- `FormReporte.frm`: formulario de reportes con filtros combinados y exportaci√≥n a PDF o Excel.
+- `ModuloBitacora.bas`: m√≥dulo est√°ndar para bit√°cora de cambios, control informativo de acceso multiusuario y actualizaci√≥n de actividad.
 
-La soluciÛn beneficia principalmente al departamento de IT o soporte tÈcnico, ya que centraliza el control de activos tecnolÛgicos utilizados por diferentes agencias, departamentos y usuarios. De manera indirecta, tambiÈn beneficia a usuarios administrativos y operativos de la empresa, al agilizar la atenciÛn de incidentes relacionados con reemplazo de equipos, prÈstamos temporales y disponibilidad de activos.
+La soluci√≥n beneficia principalmente al departamento de IT o soporte t√©cnico, ya que centraliza el control de activos tecnol√≥gicos utilizados por diferentes agencias, departamentos y usuarios. De manera indirecta, tambi√©n beneficia a usuarios administrativos y operativos de la empresa, al agilizar la atenci√≥n de incidentes relacionados con reemplazo de equipos, pr√©stamos temporales y disponibilidad de activos.
 
-La soluciÛn se ejecuta localmente en Excel, utilizando hojas estructuradas como `Inventario`, `Prestamos`, `Fuera de uso`, `Config` y `Bitacora`. Asimismo, incorpora componentes web de apoyo mediante apertura de enlaces externos para verificaciÛn de garantÌa de fabricantes y consulta de un dashboard en Power BI. En el cÛdigo suministrado no se observa un backend web propio ni una base de datos externa; la persistencia se realiza en tablas de Excel y la integraciÛn web se consume mediante hipervÌnculos.
+La soluci√≥n se ejecuta localmente en Excel, utilizando hojas estructuradas como `Inventario`, `Prestamos`, `Fuera de uso`, `Config` y `Bitacora`. Asimismo, incorpora componentes web de apoyo mediante apertura de enlaces externos para verificaci√≥n de garant√≠a de fabricantes y consulta de un dashboard en Power BI. En el c√≥digo suministrado no se observa un backend web propio ni una base de datos externa; la persistencia se realiza en tablas de Excel y la integraci√≥n web se consume mediante hiperv√≠nculos.
 
-## MetodologÌa
+## Metodolog√≠a
 
-El desarrollo siguiÛ un enfoque incremental orientado a necesidades reales del ·rea de soporte. Primero se analizaron las tareas repetitivas y los puntos de error en la actualizaciÛn manual de inventarios. Posteriormente, se diseÒaron formularios para capturar datos, se programaron rutinas modulares para b˙squedas y guardado, se agregaron validaciones y se incorporaron reportes exportables. Finalmente, se realizaron pruebas funcionales sobre los flujos de inventario, prÈstamos y reportes.
+El desarrollo sigui√≥ un enfoque incremental orientado a necesidades reales del √°rea de soporte. Primero se analizaron las tareas repetitivas y los puntos de error en la actualizaci√≥n manual de inventarios. Posteriormente, se dise√±aron formularios para capturar datos, se programaron rutinas modulares para b√∫squedas y guardado, se agregaron validaciones y se incorporaron reportes exportables. Finalmente, se realizaron pruebas funcionales sobre los flujos de inventario, pr√©stamos y reportes.
 
-La metodologÌa puede describirse en cinco etapas: an·lisis de requisitos a partir de tickets y observaciÛn directa; prototipado de formularios en el editor de VBA; programaciÛn modular separando formularios, reportes y bit·cora; pruebas unitarias/manuales sobre funciones crÌticas como validaciÛn de fechas, generaciÛn de cÛdigos, filtros y exportaciÛn; y despliegue mediante la importaciÛn de archivos `.frm` y `.bas` dentro de un libro de Excel habilitado para macros.
+La metodolog√≠a puede describirse en cinco etapas: an√°lisis de requisitos a partir de tickets y observaci√≥n directa; prototipado de formularios en el editor de VBA; programaci√≥n modular separando formularios, reportes y bit√°cora; pruebas unitarias/manuales sobre funciones cr√≠ticas como validaci√≥n de fechas, generaci√≥n de c√≥digos, filtros y exportaci√≥n; y despliegue mediante la importaci√≥n de archivos `.frm` y `.bas` dentro de un libro de Excel habilitado para macros.
 
 La estructura del proyecto VBA utiliza:
 
-- **UserForms** para presentar interfaces gr·ficas y reducir la manipulaciÛn directa de hojas.
-- **MÛdulos est·ndar** para funciones transversales, como bit·cora y control de acceso.
+- **UserForms** para presentar interfaces gr√°ficas y reducir la manipulaci√≥n directa de hojas.
+- **M√≥dulos est√°ndar** para funciones transversales, como bit√°cora y control de acceso.
 - **ListObject** para operar sobre tablas estructuradas de Excel.
-- **ListBox y ComboBox** para b˙squeda, filtrado y selecciÛn de registros.
-- **Arreglos en memoria (`Variant`)** para optimizar b˙squedas y filtrados.
+- **ListBox y ComboBox** para b√∫squeda, filtrado y selecci√≥n de registros.
+- **Arreglos en memoria (`Variant`)** para optimizar b√∫squedas y filtrados.
 - **Manejo de errores** mediante `On Error` y mensajes controlados al usuario.
-- **Validaciones determinÌsticas** para fechas y campos obligatorios.
-- **ProtecciÛn y desprotecciÛn de hojas** en operaciones crÌticas de escritura.
+- **Validaciones determin√≠sticas** para fechas y campos obligatorios.
+- **Protecci√≥n y desprotecci√≥n de hojas** en operaciones cr√≠ticas de escritura.
 
-El uso de arreglos en memoria permitiÛ mejorar el rendimiento de las b˙squedas, evitando recorrer celda por celda la hoja de c·lculo. Esto es relevante en inventarios con crecimiento continuo, donde la respuesta del formulario debe mantenerse fluida para no afectar la atenciÛn de tickets.
+El uso de arreglos en memoria permiti√≥ mejorar el rendimiento de las b√∫squedas, evitando recorrer celda por celda la hoja de c√°lculo. Esto es relevante en inventarios con crecimiento continuo, donde la respuesta del formulario debe mantenerse fluida para no afectar la atenci√≥n de tickets.
 
-Respecto a los componentes web, se identificÛ una arquitectura de consumo cliente-servidor desde Excel: el cliente VBA abre recursos externos mediante `FollowHyperlink`, mientras que los servicios remotos, como Power BI y los portales de garantÌa de fabricantes, atienden la consulta desde el navegador. No se evidencia conexiÛn directa a una API ni a una base de datos web desde el cÛdigo analizado; la fuente principal de datos permanece en tablas locales de Excel.
+Respecto a los componentes web, se identific√≥ una arquitectura de consumo cliente-servidor desde Excel: el cliente VBA abre recursos externos mediante `FollowHyperlink`, mientras que los servicios remotos, como Power BI y los portales de garant√≠a de fabricantes, atienden la consulta desde el navegador. No se evidencia conexi√≥n directa a una API ni a una base de datos web desde el c√≥digo analizado; la fuente principal de datos permanece en tablas locales de Excel.
 
-**Fragmento tÈcnico 1. Registro auditable de cambios**
+**Fragmento t√©cnico 1. Registro auditable de cambios**
 
 ```vb
 Public Sub RegistrarBitacora(accion As String, codigo As String, detalle As String)
@@ -70,9 +70,9 @@ Public Sub RegistrarBitacora(accion As String, codigo As String, detalle As Stri
         .Cells(sigFila, 3).Value = UCase(accion)
 ```
 
-Este fragmento muestra cÛmo se registra una acciÛn crÌtica con fecha, usuario, tipo de operaciÛn y cÛdigo del registro afectado. Su finalidad es proporcionar trazabilidad ante cambios en el inventario o prÈstamos.
+Este fragmento muestra c√≥mo se registra una acci√≥n cr√≠tica con fecha, usuario, tipo de operaci√≥n y c√≥digo del registro afectado. Su finalidad es proporcionar trazabilidad ante cambios en el inventario o pr√©stamos.
 
-**Fragmento tÈcnico 2. ValidaciÛn estricta de fechas**
+**Fragmento t√©cnico 2. Validaci√≥n estricta de fechas**
 
 ```vb
 Private Function EsFechaValida(ByVal sFecha As String) As Boolean
@@ -86,9 +86,9 @@ Private Function EsFechaValida(ByVal sFecha As String) As Boolean
     sMes = Mid(sFecha, 4, 2)
 ```
 
-El cÛdigo valida el formato `dd/mm/yyyy` antes de guardar fechas de garantÌa o prÈstamo. Esta decisiÛn reduce errores causados por configuraciones regionales distintas en los equipos de los usuarios.
+El c√≥digo valida el formato `dd/mm/yyyy` antes de guardar fechas de garant√≠a o pr√©stamo. Esta decisi√≥n reduce errores causados por configuraciones regionales distintas en los equipos de los usuarios.
 
-**Fragmento tÈcnico 3. Filtros combinados para reportes**
+**Fragmento t√©cnico 3. Filtros combinados para reportes**
 
 ```vb
 If filtroAgencia <> "" Then
@@ -103,13 +103,13 @@ If incluir And filtroEstado <> "" Then
 End If
 ```
 
-Este fragmento evidencia la aplicaciÛn de filtros acumulativos. Si un registro no cumple el criterio seleccionado, se excluye del reporte, permitiendo generar informes especÌficos por agencia o estado.
+Este fragmento evidencia la aplicaci√≥n de filtros acumulativos. Si un registro no cumple el criterio seleccionado, se excluye del reporte, permitiendo generar informes espec√≠ficos por agencia o estado.
 
-**Fragmento tÈcnico 4. IntegraciÛn con dashboard web**
+**Fragmento t√©cnico 4. Integraci√≥n con dashboard web**
 
 ```vb
 Private Sub btnDashboard_Click()
-    MsgBox "Se abrir· el Dashboard en tu navegador." & vbCrLf & _
+    MsgBox "Se abrir√° el Dashboard en tu navegador." & vbCrLf & _
            "Recuerda presionar 'Actualizar' en Power BI si guardaste datos nuevos.", _
            vbInformation, "Abriendo Dashboard"
     On Error Resume Next
@@ -117,104 +117,104 @@ Private Sub btnDashboard_Click()
         "https://app.powerbi.com/groups/me/reports/61acaaae-1d6c-40a8-9a6b-d70f1147a215/9fa9b6b9312b307ea30b?experience=power-bi"
 ```
 
-El procedimiento integra la herramienta de Excel con una soluciÛn web de visualizaciÛn en Power BI, facilitando que el usuario consulte mÈtricas desde el navegador.
+El procedimiento integra la herramienta de Excel con una soluci√≥n web de visualizaci√≥n en Power BI, facilitando que el usuario consulte m√©tricas desde el navegador.
 
 ## Procedimiento
 
-### Fase 1: InicializaciÛn del formulario principal
+### Fase 1: Inicializaci√≥n del formulario principal
 
-El usuario abre el formulario principal `frmGeneralCorregido`. Durante la inicializaciÛn, el formulario se ajusta al tamaÒo de la ventana de Excel, protege la interacciÛn con hojas, verifica el acceso, carga listas desde la hoja `Config`, prepara los listados de inventario y prÈstamos, y genera un nuevo cÛdigo consecutivo para posibles registros.
+El usuario abre el formulario principal `frmGeneralCorregido`. Durante la inicializaci√≥n, el formulario se ajusta al tama√±o de la ventana de Excel, protege la interacci√≥n con hojas, verifica el acceso, carga listas desde la hoja `Config`, prepara los listados de inventario y pr√©stamos, y genera un nuevo c√≥digo consecutivo para posibles registros.
 
-El flujo inicia con la carga de cat·logos como agencias, departamentos, marcas, estados y tipos de equipo. Esto evita que el usuario escriba valores libres y contribuye a mantener consistencia en los datos.
+El flujo inicia con la carga de cat√°logos como agencias, departamentos, marcas, estados y tipos de equipo. Esto evita que el usuario escriba valores libres y contribuye a mantener consistencia en los datos.
 
-### Fase 2: Registro y actualizaciÛn de inventario
+### Fase 2: Registro y actualizaci√≥n de inventario
 
-El usuario ingresa la informaciÛn del equipo en el formulario: agencia, departamento, usuario asignado, tipo de equipo, marca, modelo, serie, perifÈricos, fechas de garantÌa y comentarios. Antes de guardar, la macro valida campos obligatorios y verifica reglas especÌficas; por ejemplo, para equipos de escritorio exige mouse y teclado.
+El usuario ingresa la informaci√≥n del equipo en el formulario: agencia, departamento, usuario asignado, tipo de equipo, marca, modelo, serie, perif√©ricos, fechas de garant√≠a y comentarios. Antes de guardar, la macro valida campos obligatorios y verifica reglas espec√≠ficas; por ejemplo, para equipos de escritorio exige mouse y teclado.
 
-Luego se determina si el cÛdigo ya existe en `TablaInventario`. Si existe, se solicita confirmaciÛn para actualizar; si no existe, se agrega una nueva fila. La macro escribe los valores en las columnas correspondientes, registra la acciÛn en bit·cora como `NUEVO` o `EDICI”N`, actualiza el timestamp de actividad y guarda el libro de forma segura.
+Luego se determina si el c√≥digo ya existe en `TablaInventario`. Si existe, se solicita confirmaci√≥n para actualizar; si no existe, se agrega una nueva fila. La macro escribe los valores en las columnas correspondientes, registra la acci√≥n en bit√°cora como `NUEVO` o `EDICI√ìN`, actualiza el timestamp de actividad y guarda el libro de forma segura.
 
-### Fase 3: B˙squeda y selecciÛn de equipos para prÈstamo
+### Fase 3: B√∫squeda y selecci√≥n de equipos para pr√©stamo
 
-El usuario utiliza el buscador de inventario para localizar un usuario o serie. La b˙squeda se ejecuta en memoria mediante arreglos, lo que reduce el tiempo de respuesta en comparaciÛn con la lectura directa de celdas. Una vez seleccionado un registro, el formulario muestra usuario, departamento, agencia y serie del equipo afectado.
+El usuario utiliza el buscador de inventario para localizar un usuario o serie. La b√∫squeda se ejecuta en memoria mediante arreglos, lo que reduce el tiempo de respuesta en comparaci√≥n con la lectura directa de celdas. Una vez seleccionado un registro, el formulario muestra usuario, departamento, agencia y serie del equipo afectado.
 
-DespuÈs, el usuario presiona el botÛn para revisar equipos disponibles. El formulario `FormDisponibles` carga `TablaInventario` en memoria y filtra ˙nicamente equipos con estado `DISPONIBLE` o asociados al texto `EQUIPO DISPONIBLE`. El usuario puede buscar por nombre, marca, serie o tipo de equipo.
+Despu√©s, el usuario presiona el bot√≥n para revisar equipos disponibles. El formulario `FormDisponibles` carga `TablaInventario` en memoria y filtra √∫nicamente equipos con estado `DISPONIBLE` o asociados al texto `EQUIPO DISPONIBLE`. El usuario puede buscar por nombre, marca, serie o tipo de equipo.
 
-Antes de asignar un equipo disponible, el formulario valida que ya exista un usuario seleccionado y confirma en tiempo real que la serie a˙n siga disponible en la tabla. Esta validaciÛn evita asignaciones duplicadas cuando varios usuarios consultan el archivo o cuando la informaciÛn cambia durante la sesiÛn.
+Antes de asignar un equipo disponible, el formulario valida que ya exista un usuario seleccionado y confirma en tiempo real que la serie a√∫n siga disponible en la tabla. Esta validaci√≥n evita asignaciones duplicadas cuando varios usuarios consultan el archivo o cuando la informaci√≥n cambia durante la sesi√≥n.
 
-### Fase 4: Registro del prÈstamo y actualizaciÛn de estados
+### Fase 4: Registro del pr√©stamo y actualizaci√≥n de estados
 
-Al guardar un prÈstamo, la macro valida que exista usuario afectado, equipo PRE seleccionado y fechas con formato correcto. DespuÈs calcula el estado del prÈstamo:
+Al guardar un pr√©stamo, la macro valida que exista usuario afectado, equipo PRE seleccionado y fechas con formato correcto. Despu√©s calcula el estado del pr√©stamo:
 
-- `En prÈstamo`, cuando no existe fecha de retorno.
+- `En pr√©stamo`, cuando no existe fecha de retorno.
 - `Retornado`, cuando se registra fecha de retorno.
 - `Fuera de uso`, cuando el usuario marca el equipo como no utilizable.
 
-El registro se guarda en `TablaPrestamos` y se actualizan estados en `TablaInventario`. Si el equipo daÒado todavÌa cuenta con garantÌa, se marca como `EN TALLER / GARANTÕA`; si no es retornable, se traslada a la hoja `Fuera de uso` con un cÛdigo consecutivo `FDU`. De esta forma, la automatizaciÛn relaciona inventario, prÈstamos y bajas dentro del mismo flujo operativo.
+El registro se guarda en `TablaPrestamos` y se actualizan estados en `TablaInventario`. Si el equipo da√±ado todav√≠a cuenta con garant√≠a, se marca como `EN TALLER / GARANT√çA`; si no es retornable, se traslada a la hoja `Fuera de uso` con un c√≥digo consecutivo `FDU`. De esta forma, la automatizaci√≥n relaciona inventario, pr√©stamos y bajas dentro del mismo flujo operativo.
 
-### Fase 5: GeneraciÛn de reportes
+### Fase 5: Generaci√≥n de reportes
 
-El usuario abre `FormReporte`, selecciona filtros por agencia, estado, tipo de equipo y condiciÛn de garantÌa, y presiona `Vista Previa`. La macro lee la tabla de inventario en un arreglo y eval˙a cada filtro. Los registros que cumplen los criterios se muestran en un `ListBox`.
+El usuario abre `FormReporte`, selecciona filtros por agencia, estado, tipo de equipo y condici√≥n de garant√≠a, y presiona `Vista Previa`. La macro lee la tabla de inventario en un arreglo y eval√∫a cada filtro. Los registros que cumplen los criterios se muestran en un `ListBox`.
 
-Si existen resultados, el botÛn de exportaciÛn se habilita. El usuario puede generar un archivo PDF o Excel. Para PDF, la macro crea una hoja temporal formateada con tÌtulo, subtÌtulo de filtros, fecha, usuario, encabezados, datos y configuraciÛn de p·gina; luego exporta y elimina la hoja temporal. Para Excel, se permite exportar inventario filtrado, prÈstamos, equipos fuera de uso o las tres hojas.
+Si existen resultados, el bot√≥n de exportaci√≥n se habilita. El usuario puede generar un archivo PDF o Excel. Para PDF, la macro crea una hoja temporal formateada con t√≠tulo, subt√≠tulo de filtros, fecha, usuario, encabezados, datos y configuraci√≥n de p√°gina; luego exporta y elimina la hoja temporal. Para Excel, se permite exportar inventario filtrado, pr√©stamos, equipos fuera de uso o las tres hojas.
 
-### Fase 6: Bit·cora, control de acceso e integraciones web
+### Fase 6: Bit√°cora, control de acceso e integraciones web
 
-Cada operaciÛn crÌtica, como nuevo registro, ediciÛn, eliminaciÛn o prÈstamo, se registra en la hoja `Bitacora`. El mÛdulo tambiÈn contempla un control informativo de acceso multiusuario mediante celdas de la hoja `Config`, con usuario y fecha de apertura. Esto permite advertir cuando otra persona utiliza el archivo y reduce el riesgo de sobrescrituras en ambientes compartidos como OneDrive o carpetas de red.
+Cada operaci√≥n cr√≠tica, como nuevo registro, edici√≥n, eliminaci√≥n o pr√©stamo, se registra en la hoja `Bitacora`. El m√≥dulo tambi√©n contempla un control informativo de acceso multiusuario mediante celdas de la hoja `Config`, con usuario y fecha de apertura. Esto permite advertir cuando otra persona utiliza el archivo y reduce el riesgo de sobrescrituras en ambientes compartidos como OneDrive o carpetas de red.
 
-Como apoyo a procesos de soporte, el formulario abre portales web de garantÌa de HP y Dell copiando la serie al portapapeles, y tambiÈn abre un tablero de Power BI. Estas integraciones no sustituyen el registro local, pero permiten conectar el flujo administrativo de Excel con consultas externas necesarias para toma de decisiones.
+Como apoyo a procesos de soporte, el formulario abre portales web de garant√≠a de HP y Dell copiando la serie al portapapeles, y tambi√©n abre un tablero de Power BI. Estas integraciones no sustituyen el registro local, pero permiten conectar el flujo administrativo de Excel con consultas externas necesarias para toma de decisiones.
 
-## ConclusiÛn
+## Conclusi√≥n
 
-La automatizaciÛn desarrollada permitiÛ transformar una gestiÛn manual y dispersa del inventario tecnolÛgico en un flujo guiado por formularios, validaciones y reportes. En el contexto de Alimentos Maravilla de Honduras S.A., esto contribuyÛ a mejorar la consistencia de los datos, reducir errores de digitaciÛn, acelerar la atenciÛn de tickets de soporte y liberar carga operativa del personal de IT.
+La automatizaci√≥n desarrollada permiti√≥ transformar una gesti√≥n manual y dispersa del inventario tecnol√≥gico en un flujo guiado por formularios, validaciones y reportes. En el contexto de Alimentos Maravilla de Honduras S.A., esto contribuy√≥ a mejorar la consistencia de los datos, reducir errores de digitaci√≥n, acelerar la atenci√≥n de tickets de soporte y liberar carga operativa del personal de IT.
 
-El impacto principal se observa en la reducciÛn de pasos manuales para registrar equipos, localizar activos, asignar prÈstamos, controlar garantÌas y generar informes. Actividades que anteriormente podÌan requerir revisar varias hojas, copiar datos y construir reportes manualmente quedaron integradas en botones y formularios. Adem·s, la bit·cora fortaleciÛ la trazabilidad de cambios, aspecto importante cuando varias personas consultan o actualizan informaciÛn sensible del inventario.
+El impacto principal se observa en la reducci√≥n de pasos manuales para registrar equipos, localizar activos, asignar pr√©stamos, controlar garant√≠as y generar informes. Actividades que anteriormente pod√≠an requerir revisar varias hojas, copiar datos y construir reportes manualmente quedaron integradas en botones y formularios. Adem√°s, la bit√°cora fortaleci√≥ la trazabilidad de cambios, aspecto importante cuando varias personas consultan o actualizan informaci√≥n sensible del inventario.
 
-Desde la perspectiva de IngenierÌa en Ciencias de la ComputaciÛn, el practicante aplicÛ competencias de programaciÛn estructurada, an·lisis de sistemas, diseÒo de interfaces, validaciÛn de datos, manejo de eventos, optimizaciÛn con estructuras en memoria, pruebas funcionales y documentaciÛn tÈcnica. TambiÈn se evidenciÛ criterio para integrar herramientas locales con recursos web, como dashboards y portales de fabricantes, ampliando la utilidad del sistema para el entorno empresarial.
+Desde la perspectiva de Ingenier√≠a en Ciencias de la Computaci√≥n, el practicante aplic√≥ competencias de programaci√≥n estructurada, an√°lisis de sistemas, dise√±o de interfaces, validaci√≥n de datos, manejo de eventos, optimizaci√≥n con estructuras en memoria, pruebas funcionales y documentaci√≥n t√©cnica. Tambi√©n se evidenci√≥ criterio para integrar herramientas locales con recursos web, como dashboards y portales de fabricantes, ampliando la utilidad del sistema para el entorno empresarial.
 
 ## Recursos visuales sugeridos
 
 ### Diagrama de flujo
 
-Se recomienda elaborar un diagrama de flujo del proceso "Registro de prÈstamo y actualizaciÛn de inventario" con los siguientes elementos:
+Se recomienda elaborar un diagrama de flujo del proceso "Registro de pr√©stamo y actualizaci√≥n de inventario" con los siguientes elementos:
 
 1. **Inicio**: El usuario abre el formulario principal de inventario.
-2. **Proceso**: El sistema carga listas desde `Config`, inventario y prÈstamos.
+2. **Proceso**: El sistema carga listas desde `Config`, inventario y pr√©stamos.
 3. **Proceso**: El usuario busca un usuario o serie afectada.
-4. **DecisiÛn**: øSe seleccionÛ un usuario v·lido?
-   - No: Mostrar advertencia y regresar a b˙squeda.
-   - SÌ: Continuar.
+4. **Decisi√≥n**: ¬øSe seleccion√≥ un usuario v√°lido?
+   - No: Mostrar advertencia y regresar a b√∫squeda.
+   - S√≠: Continuar.
 5. **Proceso**: El usuario abre el formulario de equipos disponibles.
 6. **Proceso**: El sistema filtra equipos con estado disponible.
-7. **DecisiÛn**: øEl equipo seleccionado sigue disponible?
-   - No: Actualizar lista y solicitar nueva selecciÛn.
-   - SÌ: Cargar datos del equipo PRE en el formulario principal.
-8. **Proceso**: El usuario ingresa fechas, tarea y justificaciÛn.
-9. **DecisiÛn**: øLas fechas tienen formato v·lido?
-   - No: Mostrar error y solicitar correcciÛn.
-   - SÌ: Continuar.
-10. **Proceso**: Guardar prÈstamo en `TablaPrestamos`.
-11. **DecisiÛn**: øEl equipo daÒado queda fuera de uso?
-    - SÌ: Evaluar garantÌa y enviar a taller o a `Fuera de uso`.
+7. **Decisi√≥n**: ¬øEl equipo seleccionado sigue disponible?
+   - No: Actualizar lista y solicitar nueva selecci√≥n.
+   - S√≠: Cargar datos del equipo PRE en el formulario principal.
+8. **Proceso**: El usuario ingresa fechas, tarea y justificaci√≥n.
+9. **Decisi√≥n**: ¬øLas fechas tienen formato v√°lido?
+   - No: Mostrar error y solicitar correcci√≥n.
+   - S√≠: Continuar.
+10. **Proceso**: Guardar pr√©stamo en `TablaPrestamos`.
+11. **Decisi√≥n**: ¬øEl equipo da√±ado queda fuera de uso?
+    - S√≠: Evaluar garant√≠a y enviar a taller o a `Fuera de uso`.
     - No: Actualizar estado del equipo PRE como prestado o disponible.
-12. **Proceso**: Registrar acciÛn en bit·cora y guardar libro.
-13. **Fin**: Mostrar mensaje de Èxito y refrescar listados.
+12. **Proceso**: Registrar acci√≥n en bit√°cora y guardar libro.
+13. **Fin**: Mostrar mensaje de √©xito y refrescar listados.
 
-### Fragmentos de cÛdigo como Figuras
+### Fragmentos de c√≥digo como Figuras
 
-**Figura 6. FunciÛn de registro de bit·cora para auditorÌa de cambios.**  
-Se recomienda utilizar el fragmento `RegistrarBitacora` del archivo `ModuloBitacora.bas`, debido a que evidencia trazabilidad, usuario del sistema y fecha de ejecuciÛn.
+**Figura 6. Funci√≥n de registro de bit√°cora para auditor√≠a de cambios.**  
+Se recomienda utilizar el fragmento `RegistrarBitacora` del archivo `ModuloBitacora.bas`, debido a que evidencia trazabilidad, usuario del sistema y fecha de ejecuci√≥n.
 
-**Figura 7. ValidaciÛn estricta de fecha en formato dd/mm/yyyy.**  
-Se recomienda utilizar la funciÛn `EsFechaValida` del archivo `frmGeneralCorregido.frm`, ya que muestra control de calidad de datos antes de registrar garantÌas o prÈstamos.
+**Figura 7. Validaci√≥n estricta de fecha en formato dd/mm/yyyy.**  
+Se recomienda utilizar la funci√≥n `EsFechaValida` del archivo `frmGeneralCorregido.frm`, ya que muestra control de calidad de datos antes de registrar garant√≠as o pr√©stamos.
 
-**Figura 8. AplicaciÛn de filtros combinados para generaciÛn de reportes.**  
-Se recomienda utilizar el bloque de filtros de `EjecutarFiltroReporte` en `FormReporte.frm`, porque representa la lÛgica de consulta del inventario por criterios administrativos.
+**Figura 8. Aplicaci√≥n de filtros combinados para generaci√≥n de reportes.**  
+Se recomienda utilizar el bloque de filtros de `EjecutarFiltroReporte` en `FormReporte.frm`, porque representa la l√≥gica de consulta del inventario por criterios administrativos.
 
-**Figura 9. IntegraciÛn con dashboard web de Power BI.**  
-Se recomienda utilizar el procedimiento `btnDashboard_Click` de `frmGeneralCorregido.frm`, debido a que demuestra la conexiÛn entre la herramienta local en Excel y un recurso web corporativo.
+**Figura 9. Integraci√≥n con dashboard web de Power BI.**  
+Se recomienda utilizar el procedimiento `btnDashboard_Click` de `frmGeneralCorregido.frm`, debido a que demuestra la conexi√≥n entre la herramienta local en Excel y un recurso web corporativo.
 
 ### Sugerencia de captura de pantalla
 
-Se recomienda tomar una captura de pantalla en el momento en que el usuario abre el formulario `FormReporte`, selecciona filtros y visualiza resultados en la vista previa antes de exportar. Esta captura permite evidenciar la interfaz de usuario, los criterios de b˙squeda, el conteo de registros y la preparaciÛn del reporte final.
+Se recomienda tomar una captura de pantalla en el momento en que el usuario abre el formulario `FormReporte`, selecciona filtros y visualiza resultados en la vista previa antes de exportar. Esta captura permite evidenciar la interfaz de usuario, los criterios de b√∫squeda, el conteo de registros y la preparaci√≥n del reporte final.
 
-Como segunda evidencia visual, se sugiere capturar el formulario `FormDisponibles` despuÈs de filtrar equipos disponibles y antes de seleccionar uno para prÈstamo. Esta imagen demostrarÌa el proceso de asignaciÛn controlada de equipos y la validaciÛn operativa previa al registro del prÈstamo.
+Como segunda evidencia visual, se sugiere capturar el formulario `FormDisponibles` despu√©s de filtrar equipos disponibles y antes de seleccionar uno para pr√©stamo. Esta imagen demostrar√≠a el proceso de asignaci√≥n controlada de equipos y la validaci√≥n operativa previa al registro del pr√©stamo.

@@ -2,20 +2,20 @@
 
 ## Antecedentes
 
-Durante la pr·ctica profesional supervisada en Alimentos Maravilla de Honduras S.A., se identificÛ que el departamento de control de calidad requerÌa un mecanismo m·s ordenado para administrar reactivos, utensilios y materiales utilizados en an·lisis internos. En una empresa industrial y alimentaria, el control de reactivos es un proceso sensible porque se relaciona con inspecciones, pruebas de laboratorio, seguimiento de vencimientos y disponibilidad de insumos para verificar la calidad de materias primas, producto en proceso y producto terminado.
+Durante la pr√°ctica profesional supervisada en Alimentos Maravilla de Honduras S.A., se identific√≥ que el departamento de control de calidad requer√≠a un mecanismo m√°s ordenado para administrar reactivos, utensilios y materiales utilizados en an√°lisis internos. En una empresa industrial y alimentaria, el control de reactivos es un proceso sensible porque se relaciona con inspecciones, pruebas de laboratorio, seguimiento de vencimientos y disponibilidad de insumos para verificar la calidad de materias primas, producto en proceso y producto terminado.
 
-Antes de la automatizaciÛn, el registro manual de reactivos podÌa generar inconsistencias en nombres, unidades de medida, cantidades disponibles, fechas de vencimiento y estados de inventario. Estas inconsistencias podÌan ocasionar compras no planificadas, uso de reactivos vencidos, dificultad para justificar consumos y pÈrdida de tiempo al elaborar reportes semanales. Adem·s, el personal debÌa revisar manualmente hojas de Excel para conocer si un reactivo estaba disponible, prÛximo a vencer, vencido, con stock bajo o sin existencia.
+Antes de la automatizaci√≥n, el registro manual de reactivos pod√≠a generar inconsistencias en nombres, unidades de medida, cantidades disponibles, fechas de vencimiento y estados de inventario. Estas inconsistencias pod√≠an ocasionar compras no planificadas, uso de reactivos vencidos, dificultad para justificar consumos y p√©rdida de tiempo al elaborar reportes semanales. Adem√°s, el personal deb√≠a revisar manualmente hojas de Excel para conocer si un reactivo estaba disponible, pr√≥ximo a vencer, vencido, con stock bajo o sin existencia.
 
-La oportunidad de mejora se identificÛ mediante la observaciÛn directa de tareas repetitivas y solicitudes del ·rea usuaria, especialmente aquellas relacionadas con actualizaciÛn de stock, b˙squeda de reactivos, generaciÛn de cierres y elaboraciÛn de reportes. A partir de estas necesidades, el practicante desarrollÛ un segundo sistema en Excel con formularios VBA, orientado a facilitar operaciones CRUD, c·lculo de estados, conversiÛn de unidades y generaciÛn de reportes para control de calidad.
+La oportunidad de mejora se identific√≥ mediante la observaci√≥n directa de tareas repetitivas y solicitudes del √°rea usuaria, especialmente aquellas relacionadas con actualizaci√≥n de stock, b√∫squeda de reactivos, generaci√≥n de cierres y elaboraci√≥n de reportes. A partir de estas necesidades, el practicante desarroll√≥ un segundo sistema en Excel con formularios VBA, orientado a facilitar operaciones CRUD, c√°lculo de estados, conversi√≥n de unidades y generaci√≥n de reportes para control de calidad.
 
 ## Objetivo
 
-El objetivo tÈcnico principal fue automatizar la gestiÛn del inventario de reactivos mediante formularios VBA en Excel, permitiendo registrar, actualizar, eliminar, buscar, rebajar y agregar existencias de forma controlada, con validaciones de datos y c·lculo autom·tico del estado de cada reactivo.
+El objetivo t√©cnico principal fue automatizar la gesti√≥n del inventario de reactivos mediante formularios VBA en Excel, permitiendo registrar, actualizar, eliminar, buscar, rebajar y agregar existencias de forma controlada, con validaciones de datos y c√°lculo autom√°tico del estado de cada reactivo.
 
-De forma especÌfica, la soluciÛn buscÛ:
+De forma espec√≠fica, la soluci√≥n busc√≥:
 
 - Registrar reactivos con identificadores consecutivos bajo el prefijo `RCT`.
-- Registrar artÌculos o utensilios simples con identificadores bajo el prefijo `UTN`.
+- Registrar art√≠culos o utensilios simples con identificadores bajo el prefijo `UTN`.
 - Controlar cantidades por envase, capacidad y total disponible en unidad base.
 - Calcular estados como `DISPONIBLE`, `PROXIMO A VENCER`, `VENCIDO`, `STOCK BAJO` o `SIN EXISTENCIA`.
 - Rebajar inventario por consumo y agregar stock por ingreso de nuevos reactivos.
@@ -27,34 +27,34 @@ De forma especÌfica, la soluciÛn buscÛ:
 
 El alcance funcional del sistema se concentra en dos formularios VBA:
 
-- `INVENTARIOCRUD.frm`: formulario principal para administrar reactivos, ejecutar operaciones de creaciÛn, lectura, actualizaciÛn y eliminaciÛn, controlar entradas y salidas de stock, buscar registros, calcular estados, generar reportes y crear cierres semanales.
-- `AGGARTICULO.frm`: formulario complementario para agregar artÌculos simples o utensilios, con generaciÛn autom·tica de cÛdigo `UTN` y registro de observaciones.
+- `INVENTARIOCRUD.frm`: formulario principal para administrar reactivos, ejecutar operaciones de creaci√≥n, lectura, actualizaci√≥n y eliminaci√≥n, controlar entradas y salidas de stock, buscar registros, calcular estados, generar reportes y crear cierres semanales.
+- `AGGARTICULO.frm`: formulario complementario para agregar art√≠culos simples o utensilios, con generaci√≥n autom√°tica de c√≥digo `UTN` y registro de observaciones.
 
-La soluciÛn utiliza `Hoja1` como base de datos local en Excel. En esta hoja se crean y administran doce columnas: `ID`, `REACTIVO`, `CANTIDAD`, `FECHA VENCIMIENTO`, `FECHA PEDIDO`, `FECHA APERTURA`, `UNIDAD`, `ESTADO`, `OBSERVACIONES`, `CAPACIDAD`, `TOTAL BASE` y `ENVASE`. Estas columnas permiten almacenar informaciÛn operativa suficiente para el seguimiento b·sico del inventario del ·rea.
+La soluci√≥n utiliza `Hoja1` como base de datos local en Excel. En esta hoja se crean y administran doce columnas: `ID`, `REACTIVO`, `CANTIDAD`, `FECHA VENCIMIENTO`, `FECHA PEDIDO`, `FECHA APERTURA`, `UNIDAD`, `ESTADO`, `OBSERVACIONES`, `CAPACIDAD`, `TOTAL BASE` y `ENVASE`. Estas columnas permiten almacenar informaci√≥n operativa suficiente para el seguimiento b√°sico del inventario del √°rea.
 
-Los usuarios beneficiados son principalmente colaboradores del departamento de control de calidad, responsables de registrar reactivos, consultar disponibilidad, controlar vencimientos y preparar reportes de inventario. De manera indirecta, tambiÈn se beneficia el ·rea administrativa o de compras, ya que la informaciÛn generada puede apoyar decisiones sobre reposiciÛn de insumos y prevenciÛn de desabastecimiento.
+Los usuarios beneficiados son principalmente colaboradores del departamento de control de calidad, responsables de registrar reactivos, consultar disponibilidad, controlar vencimientos y preparar reportes de inventario. De manera indirecta, tambi√©n se beneficia el √°rea administrativa o de compras, ya que la informaci√≥n generada puede apoyar decisiones sobre reposici√≥n de insumos y prevenci√≥n de desabastecimiento.
 
-La soluciÛn se ejecuta localmente en Excel y no evidencia componentes web, conexiÛn a bases de datos externas ni consumo de APIs. Esta caracterÌstica la diferencia del primer sistema documentado, que incluÌa enlaces hacia Power BI y portales de garantÌa. En este segundo sistema, la funcionalidad se concentra en formularios, macros, c·lculos locales y exportaciÛn de archivos.
+La soluci√≥n se ejecuta localmente en Excel y no evidencia componentes web, conexi√≥n a bases de datos externas ni consumo de APIs. Esta caracter√≠stica la diferencia del primer sistema documentado, que inclu√≠a enlaces hacia Power BI y portales de garant√≠a. En este segundo sistema, la funcionalidad se concentra en formularios, macros, c√°lculos locales y exportaci√≥n de archivos.
 
-## MetodologÌa
+## Metodolog√≠a
 
-El desarrollo siguiÛ un enfoque incremental basado en necesidades operativas del departamento de control de calidad. Primero se definiÛ la estructura mÌnima de datos requerida para controlar reactivos y utensilios. Luego se implementÛ un formulario principal para operaciones CRUD y un formulario secundario para artÌculos simples. Posteriormente, se agregaron validaciones, funciones auxiliares de conversiÛn de unidades, c·lculo autom·tico de estados, b˙squeda optimizada y exportaciÛn de reportes.
+El desarrollo sigui√≥ un enfoque incremental basado en necesidades operativas del departamento de control de calidad. Primero se defini√≥ la estructura m√≠nima de datos requerida para controlar reactivos y utensilios. Luego se implement√≥ un formulario principal para operaciones CRUD y un formulario secundario para art√≠culos simples. Posteriormente, se agregaron validaciones, funciones auxiliares de conversi√≥n de unidades, c√°lculo autom√°tico de estados, b√∫squeda optimizada y exportaci√≥n de reportes.
 
-La metodologÌa puede describirse en cinco etapas: an·lisis de requisitos mediante observaciÛn de tareas repetitivas; prototipado de formularios en el editor de VBA; programaciÛn modular dentro de los eventos de cada `UserForm`; pruebas funcionales sobre registro, actualizaciÛn, rebaja, entrada de stock, b˙squeda y reportes; y despliegue mediante importaciÛn de los archivos `.frm` en un libro de Excel habilitado para macros.
+La metodolog√≠a puede describirse en cinco etapas: an√°lisis de requisitos mediante observaci√≥n de tareas repetitivas; prototipado de formularios en el editor de VBA; programaci√≥n modular dentro de los eventos de cada `UserForm`; pruebas funcionales sobre registro, actualizaci√≥n, rebaja, entrada de stock, b√∫squeda y reportes; y despliegue mediante importaci√≥n de los archivos `.frm` en un libro de Excel habilitado para macros.
 
-La estructura tÈcnica del proyecto utiliza:
+La estructura t√©cnica del proyecto utiliza:
 
-- **UserForms** para encapsular la interacciÛn del usuario y evitar ediciÛn directa de la hoja.
-- **Eventos de botones y cajas de texto** para ejecutar operaciones especÌficas.
+- **UserForms** para encapsular la interacci√≥n del usuario y evitar edici√≥n directa de la hoja.
+- **Eventos de botones y cajas de texto** para ejecutar operaciones espec√≠ficas.
 - **`Application.Match`** para ubicar registros por ID dentro de la hoja.
-- **Arreglos din·micos (`Variant`)** para cargar y filtrar datos en el `ListBox`.
-- **Funciones auxiliares** para generaciÛn de cÛdigos, conversiÛn de unidades y c·lculo de estado.
+- **Arreglos din√°micos (`Variant`)** para cargar y filtrar datos en el `ListBox`.
+- **Funciones auxiliares** para generaci√≥n de c√≥digos, conversi√≥n de unidades y c√°lculo de estado.
 - **Validaciones de campos obligatorios** para reactivo, cantidad, unidad y fecha de vencimiento.
-- **Manejo b·sico de errores** mediante verificaciÛn de valores, `IsError`, `IsDate`, `IsNumeric` y mensajes al usuario.
+- **Manejo b√°sico de errores** mediante verificaci√≥n de valores, `IsError`, `IsDate`, `IsNumeric` y mensajes al usuario.
 
-Entre las tÈcnicas de optimizaciÛn se observa el uso de matrices para asignar resultados directamente al `ListBox`, evitando actualizaciones celda por celda durante la b˙squeda. TambiÈn se automatiza la creaciÛn de encabezados cuando la hoja est· vacÌa, lo que reduce tareas iniciales de configuraciÛn y estandariza la estructura de datos.
+Entre las t√©cnicas de optimizaci√≥n se observa el uso de matrices para asignar resultados directamente al `ListBox`, evitando actualizaciones celda por celda durante la b√∫squeda. Tambi√©n se automatiza la creaci√≥n de encabezados cuando la hoja est√° vac√≠a, lo que reduce tareas iniciales de configuraci√≥n y estandariza la estructura de datos.
 
-**Fragmento tÈcnico 1. CreaciÛn autom·tica de encabezados**
+**Fragmento t√©cnico 1. Creaci√≥n autom√°tica de encabezados**
 
 ```vb
 Sub VerificarEncabezados()
@@ -67,25 +67,25 @@ Sub VerificarEncabezados()
             "CAPACIDAD", "TOTAL BASE", "ENVASE")
 ```
 
-Este fragmento muestra cÛmo el sistema prepara la estructura de la hoja cuando a˙n no existen encabezados. La automatizaciÛn evita errores de configuraciÛn inicial y asegura que los datos se registren en columnas estandarizadas.
+Este fragmento muestra c√≥mo el sistema prepara la estructura de la hoja cuando a√∫n no existen encabezados. La automatizaci√≥n evita errores de configuraci√≥n inicial y asegura que los datos se registren en columnas estandarizadas.
 
-**Fragmento tÈcnico 2. Registro de reactivos con validaciones**
+**Fragmento t√©cnico 2. Registro de reactivos con validaciones**
 
 ```vb
 If txtReactivo.Value = "" Then MsgBox "Ingrese el reactivo", vbExclamation: Exit Sub
-If Not IsNumeric(txtCantidad.Value) Or Val(txtCantidad.Value) <= 0 Then MsgBox "Cantidad inv·lida", vbExclamation: Exit Sub
-If Not IsDate(txtFechaVencimiento.Value) Then MsgBox "Fecha vencimiento inv·lida", vbExclamation: Exit Sub
+If Not IsNumeric(txtCantidad.Value) Or Val(txtCantidad.Value) <= 0 Then MsgBox "Cantidad inv√°lida", vbExclamation: Exit Sub
+If Not IsDate(txtFechaVencimiento.Value) Then MsgBox "Fecha vencimiento inv√°lida", vbExclamation: Exit Sub
 If cmbUnidad.Value = "" Then MsgBox "Seleccione unidad", vbExclamation: Exit Sub
 capacidad = Val(InputBox("Ingrese la capacidad por envase (Ej: 500 para 500ml)", "Capacidad del Envase"))
-If capacidad <= 0 Then MsgBox "Capacidad inv·lida", vbExclamation: Exit Sub
+If capacidad <= 0 Then MsgBox "Capacidad inv√°lida", vbExclamation: Exit Sub
 cantidadEnvases = CDbl(txtCantidad.Value)
 totalBase = cantidadEnvases * capacidad
 estado = CalcularEstado(CDate(txtFechaVencimiento.Value))
 ```
 
-El bloque valida los datos mÌnimos antes de guardar un reactivo y calcula el total disponible a partir de la cantidad de envases y la capacidad por envase. Esto reduce errores de digitaciÛn y mejora la confiabilidad del inventario.
+El bloque valida los datos m√≠nimos antes de guardar un reactivo y calcula el total disponible a partir de la cantidad de envases y la capacidad por envase. Esto reduce errores de digitaci√≥n y mejora la confiabilidad del inventario.
 
-**Fragmento tÈcnico 3. Rebaja de stock con conversiÛn de unidades**
+**Fragmento t√©cnico 3. Rebaja de stock con conversi√≥n de unidades**
 
 ```vb
 cantidadNormalizada = ConvertirUnidades(cantidadIngresada, unidadIngresada, unidadProducto)
@@ -102,7 +102,7 @@ End If
 
 Este fragmento evidencia el control aplicado antes de rebajar inventario. La macro convierte la unidad ingresada a la unidad del producto y evita consumos superiores al stock disponible.
 
-**Fragmento tÈcnico 4. B˙squeda optimizada mediante arreglo**
+**Fragmento t√©cnico 4. B√∫squeda optimizada mediante arreglo**
 
 ```vb
 datosOriginales = ws.Range("A2:L" & ultFila).Value
@@ -116,61 +116,61 @@ Next i
 ReDim datosFiltrados(0 To count - 1, 0 To 11)
 ```
 
-El uso de arreglos permite filtrar registros por ID o nombre de reactivo sin consultar repetidamente la hoja de c·lculo. Esta tÈcnica mejora la experiencia del usuario cuando el inventario crece.
+El uso de arreglos permite filtrar registros por ID o nombre de reactivo sin consultar repetidamente la hoja de c√°lculo. Esta t√©cnica mejora la experiencia del usuario cuando el inventario crece.
 
 ## Procedimiento
 
-### Fase 1: InicializaciÛn del formulario principal
+### Fase 1: Inicializaci√≥n del formulario principal
 
-El usuario abre el formulario `INVENTARIOCRUD`. Durante la inicializaciÛn, la macro centra la ventana, verifica si `Hoja1` tiene encabezados, carga los combos de unidades y tipos de envase, configura el `ListBox` con doce columnas, bloquea campos autom·ticos como `txtID` y `txtEstado`, y carga los datos existentes en la lista.
+El usuario abre el formulario `INVENTARIOCRUD`. Durante la inicializaci√≥n, la macro centra la ventana, verifica si `Hoja1` tiene encabezados, carga los combos de unidades y tipos de envase, configura el `ListBox` con doce columnas, bloquea campos autom√°ticos como `txtID` y `txtEstado`, y carga los datos existentes en la lista.
 
-Si la hoja no tiene estructura previa, el sistema crea los encabezados y aplica formato visual. Esta fase permite que el archivo quede preparado para operar sin requerir configuraciÛn manual avanzada por parte del usuario.
+Si la hoja no tiene estructura previa, el sistema crea los encabezados y aplica formato visual. Esta fase permite que el archivo quede preparado para operar sin requerir configuraci√≥n manual avanzada por parte del usuario.
 
 ### Fase 2: Registro de un reactivo
 
-El usuario ingresa el nombre del reactivo, cantidad de envases, fecha de vencimiento, fecha de pedido, fecha de apertura, unidad, envase y observaciones. Al presionar el botÛn de guardar, el sistema valida campos obligatorios y solicita la capacidad por envase mediante un cuadro de entrada.
+El usuario ingresa el nombre del reactivo, cantidad de envases, fecha de vencimiento, fecha de pedido, fecha de apertura, unidad, envase y observaciones. Al presionar el bot√≥n de guardar, el sistema valida campos obligatorios y solicita la capacidad por envase mediante un cuadro de entrada.
 
-Posteriormente, el sistema calcula el total base multiplicando la cantidad de envases por la capacidad, determina el estado seg˙n la fecha de vencimiento y genera un ID consecutivo con el prefijo `RCT`. Finalmente, escribe los datos en la siguiente fila disponible de `Hoja1`, actualiza el `ListBox` y limpia los campos para un nuevo registro.
+Posteriormente, el sistema calcula el total base multiplicando la cantidad de envases por la capacidad, determina el estado seg√∫n la fecha de vencimiento y genera un ID consecutivo con el prefijo `RCT`. Finalmente, escribe los datos en la siguiente fila disponible de `Hoja1`, actualiza el `ListBox` y limpia los campos para un nuevo registro.
 
-### Fase 3: ActualizaciÛn y eliminaciÛn de registros
+### Fase 3: Actualizaci√≥n y eliminaci√≥n de registros
 
 Cuando el usuario selecciona un elemento del `ListBox`, el sistema carga los datos del reactivo en los controles del formulario. Esto permite modificar cantidades, fechas, unidad, envase u observaciones. Al actualizar, la macro localiza la fila mediante `Application.Match`, recalcula el total base y actualiza el estado de acuerdo con la fecha de vencimiento.
 
-Para eliminar un registro, el usuario debe seleccionar un reactivo y confirmar la acciÛn. La macro busca el ID en la primera columna de `Hoja1`, elimina la fila correspondiente, recarga los datos y limpia los controles.
+Para eliminar un registro, el usuario debe seleccionar un reactivo y confirmar la acci√≥n. La macro busca el ID en la primera columna de `Hoja1`, elimina la fila correspondiente, recarga los datos y limpia los controles.
 
 ### Fase 4: Rebaja de inventario por consumo
 
-El usuario selecciona un reactivo y presiona el botÛn de rebaja. El sistema solicita la cantidad consumida y la unidad correspondiente. Luego identifica la unidad registrada del producto, convierte la cantidad ingresada a una unidad compatible y valida que no se consuma m·s de lo disponible.
+El usuario selecciona un reactivo y presiona el bot√≥n de rebaja. El sistema solicita la cantidad consumida y la unidad correspondiente. Luego identifica la unidad registrada del producto, convierte la cantidad ingresada a una unidad compatible y valida que no se consuma m√°s de lo disponible.
 
-Si la operaciÛn es v·lida, se descuenta la cantidad del total base, se recalcula la cantidad de envases y se actualiza el estado. Si el total llega a cero, el estado cambia a `SIN EXISTENCIA`; si queda menos de un envase, cambia a `STOCK BAJO` y se muestra una alerta al usuario.
+Si la operaci√≥n es v√°lida, se descuenta la cantidad del total base, se recalcula la cantidad de envases y se actualiza el estado. Si el total llega a cero, el estado cambia a `SIN EXISTENCIA`; si queda menos de un envase, cambia a `STOCK BAJO` y se muestra una alerta al usuario.
 
 ### Fase 5: Agregar stock al inventario
 
-Cuando llegan nuevos reactivos, el usuario selecciona el registro existente y utiliza el botÛn de agregar stock. La macro solicita la cantidad recibida y su unidad, convierte el valor a la unidad registrada, suma el resultado al total base, recalcula la cantidad de envases y actualiza la fecha de pedido con la fecha actual.
+Cuando llegan nuevos reactivos, el usuario selecciona el registro existente y utiliza el bot√≥n de agregar stock. La macro solicita la cantidad recibida y su unidad, convierte el valor a la unidad registrada, suma el resultado al total base, recalcula la cantidad de envases y actualiza la fecha de pedido con la fecha actual.
 
 Este flujo permite registrar entradas de inventario sin crear duplicados del mismo reactivo, manteniendo continuidad en el historial operativo del registro.
 
-### Fase 6: B˙squeda, reportes y cierre semanal
+### Fase 6: B√∫squeda, reportes y cierre semanal
 
-El campo de b˙squeda filtra el inventario por ID o nombre de reactivo. La b˙squeda se ejecuta con arreglos en memoria y actualiza el `ListBox` con los resultados coincidentes.
+El campo de b√∫squeda filtra el inventario por ID o nombre de reactivo. La b√∫squeda se ejecuta con arreglos en memoria y actualiza el `ListBox` con los resultados coincidentes.
 
-Para reportes, el usuario puede exportar los datos visibles a PDF o Excel. La macro crea un libro temporal, copia los encabezados y registros del `ListBox`, aplica formato b·sico y solicita la ruta de guardado. En el caso de PDF, configura la p·gina en orientaciÛn horizontal y ajusta el ancho a una p·gina.
+Para reportes, el usuario puede exportar los datos visibles a PDF o Excel. La macro crea un libro temporal, copia los encabezados y registros del `ListBox`, aplica formato b√°sico y solicita la ruta de guardado. En el caso de PDF, configura la p√°gina en orientaci√≥n horizontal y ajusta el ancho a una p√°gina.
 
-El cierre semanal permite copiar `Hoja1` a una nueva hoja con el nombre indicado por el usuario. Antes de crearla, se limpian caracteres no permitidos y se verifica que no exista una hoja con el mismo nombre. Esta funciÛn permite conservar cortes histÛricos del inventario de reactivos.
+El cierre semanal permite copiar `Hoja1` a una nueva hoja con el nombre indicado por el usuario. Antes de crearla, se limpian caracteres no permitidos y se verifica que no exista una hoja con el mismo nombre. Esta funci√≥n permite conservar cortes hist√≥ricos del inventario de reactivos.
 
-### Fase 7: Registro de artÌculos o utensilios simples
+### Fase 7: Registro de art√≠culos o utensilios simples
 
-El formulario `AGGARTICULO` se utiliza para registrar artÌculos simples, como utensilios o materiales auxiliares que no requieren el mismo nivel de control de vencimiento que un reactivo. Al abrirse, genera autom·ticamente un ID con prefijo `UTN`, bloquea el campo de ID y permite ingresar nombre y observaciones.
+El formulario `AGGARTICULO` se utiliza para registrar art√≠culos simples, como utensilios o materiales auxiliares que no requieren el mismo nivel de control de vencimiento que un reactivo. Al abrirse, genera autom√°ticamente un ID con prefijo `UTN`, bloquea el campo de ID y permite ingresar nombre y observaciones.
 
-Al guardar, valida que exista nombre, escribe el ID, nombre y observaciones en `Hoja1`, y genera un nuevo ID para continuar registrando artÌculos sin cerrar el formulario.
+Al guardar, valida que exista nombre, escribe el ID, nombre y observaciones en `Hoja1`, y genera un nuevo ID para continuar registrando art√≠culos sin cerrar el formulario.
 
-## ConclusiÛn
+## Conclusi√≥n
 
-La automatizaciÛn del inventario de reactivos permitiÛ trasladar un proceso manual y propenso a inconsistencias hacia una herramienta guiada por formularios, validaciones y c·lculos autom·ticos. En el departamento de control de calidad, esto favorece el seguimiento de vencimientos, disponibilidad de reactivos, control de consumos, entradas de stock y generaciÛn de reportes para la toma de decisiones.
+La automatizaci√≥n del inventario de reactivos permiti√≥ trasladar un proceso manual y propenso a inconsistencias hacia una herramienta guiada por formularios, validaciones y c√°lculos autom√°ticos. En el departamento de control de calidad, esto favorece el seguimiento de vencimientos, disponibilidad de reactivos, control de consumos, entradas de stock y generaci√≥n de reportes para la toma de decisiones.
 
-El impacto principal se refleja en la reducciÛn de tiempo dedicado a revisar hojas manualmente, la disminuciÛn de errores por unidades incompatibles, la detecciÛn oportuna de reactivos prÛximos a vencer y la posibilidad de conservar cierres periÛdicos del inventario. Para una empresa alimentaria, estos controles contribuyen indirectamente a la continuidad de los an·lisis de calidad y a la disponibilidad de insumos necesarios para verificar condiciones de producciÛn.
+El impacto principal se refleja en la reducci√≥n de tiempo dedicado a revisar hojas manualmente, la disminuci√≥n de errores por unidades incompatibles, la detecci√≥n oportuna de reactivos pr√≥ximos a vencer y la posibilidad de conservar cierres peri√≥dicos del inventario. Para una empresa alimentaria, estos controles contribuyen indirectamente a la continuidad de los an√°lisis de calidad y a la disponibilidad de insumos necesarios para verificar condiciones de producci√≥n.
 
-Desde la perspectiva de IngenierÌa en Ciencias de la ComputaciÛn, el practicante aplicÛ competencias de programaciÛn orientada a eventos, an·lisis de procesos, diseÒo de interfaces, validaciÛn de datos, manejo de estructuras de almacenamiento en Excel, optimizaciÛn mediante arreglos, generaciÛn de reportes y pruebas funcionales. Adem·s, se evidencia capacidad para adaptar una misma tecnologÌa, VBA en Excel, a necesidades distintas: primero para inventario tecnolÛgico y luego para inventario de reactivos del ·rea de control de calidad.
+Desde la perspectiva de Ingenier√≠a en Ciencias de la Computaci√≥n, el practicante aplic√≥ competencias de programaci√≥n orientada a eventos, an√°lisis de procesos, dise√±o de interfaces, validaci√≥n de datos, manejo de estructuras de almacenamiento en Excel, optimizaci√≥n mediante arreglos, generaci√≥n de reportes y pruebas funcionales. Adem√°s, se evidencia capacidad para adaptar una misma tecnolog√≠a, VBA en Excel, a necesidades distintas: primero para inventario tecnol√≥gico y luego para inventario de reactivos del √°rea de control de calidad.
 
 ## Recursos visuales sugeridos
 
@@ -181,47 +181,47 @@ Se recomienda elaborar un diagrama de flujo del proceso "Rebaja de inventario po
 1. **Inicio**: El usuario abre el formulario `INVENTARIOCRUD`.
 2. **Proceso**: El sistema carga encabezados, combos y datos de `Hoja1`.
 3. **Proceso**: El usuario busca y selecciona un reactivo.
-4. **DecisiÛn**: øExiste un reactivo seleccionado?
-   - No: Mostrar mensaje de advertencia y regresar a la selecciÛn.
-   - SÌ: Continuar.
+4. **Decisi√≥n**: ¬øExiste un reactivo seleccionado?
+   - No: Mostrar mensaje de advertencia y regresar a la selecci√≥n.
+   - S√≠: Continuar.
 5. **Proceso**: El usuario ingresa cantidad consumida y unidad.
-6. **DecisiÛn**: øLa cantidad es mayor que cero y la unidad fue ingresada?
-   - No: Cancelar operaciÛn.
-   - SÌ: Continuar.
+6. **Decisi√≥n**: ¬øLa cantidad es mayor que cero y la unidad fue ingresada?
+   - No: Cancelar operaci√≥n.
+   - S√≠: Continuar.
 7. **Proceso**: Convertir la cantidad ingresada a la unidad registrada del producto.
-8. **DecisiÛn**: øLa conversiÛn es v·lida?
+8. **Decisi√≥n**: ¬øLa conversi√≥n es v√°lida?
    - No: Mostrar error de unidad incompatible.
-   - SÌ: Continuar.
-9. **DecisiÛn**: øExiste stock suficiente?
+   - S√≠: Continuar.
+9. **Decisi√≥n**: ¬øExiste stock suficiente?
    - No: Mostrar mensaje de stock insuficiente.
-   - SÌ: Continuar.
+   - S√≠: Continuar.
 10. **Proceso**: Restar la cantidad consumida al total base.
 11. **Proceso**: Recalcular cantidad de envases.
-12. **DecisiÛn**: øEl nuevo total es cero o menor?
-    - SÌ: Actualizar estado a `SIN EXISTENCIA`.
+12. **Decisi√≥n**: ¬øEl nuevo total es cero o menor?
+    - S√≠: Actualizar estado a `SIN EXISTENCIA`.
     - No: Evaluar si queda menos de un envase.
-13. **DecisiÛn**: øQueda menos de un envase?
-    - SÌ: Actualizar estado a `STOCK BAJO` y mostrar alerta.
-    - No: Calcular estado seg˙n vencimiento.
+13. **Decisi√≥n**: ¬øQueda menos de un envase?
+    - S√≠: Actualizar estado a `STOCK BAJO` y mostrar alerta.
+    - No: Calcular estado seg√∫n vencimiento.
 14. **Proceso**: Guardar cambios en `Hoja1` y recargar el listado.
-15. **Fin**: Mostrar confirmaciÛn de rebaja aplicada.
+15. **Fin**: Mostrar confirmaci√≥n de rebaja aplicada.
 
-### Fragmentos de cÛdigo como Figuras
+### Fragmentos de c√≥digo como Figuras
 
-**Figura 10. CreaciÛn autom·tica de estructura de inventario de reactivos.**  
-Se recomienda utilizar el fragmento `VerificarEncabezados` del archivo `INVENTARIOCRUD.frm`, porque evidencia cÛmo el sistema estandariza las columnas requeridas para operar.
+**Figura 10. Creaci√≥n autom√°tica de estructura de inventario de reactivos.**  
+Se recomienda utilizar el fragmento `VerificarEncabezados` del archivo `INVENTARIOCRUD.frm`, porque evidencia c√≥mo el sistema estandariza las columnas requeridas para operar.
 
-**Figura 11. Validaciones y c·lculo inicial para registro de reactivos.**  
+**Figura 11. Validaciones y c√°lculo inicial para registro de reactivos.**  
 Se recomienda utilizar el bloque de validaciones del procedimiento `btnGuardar_Click`, ya que muestra el control previo sobre cantidad, fecha, unidad y capacidad de envase.
 
-**Figura 12. Rebaja de stock con conversiÛn de unidades y validaciÛn de existencia.**  
-Se recomienda utilizar el fragmento de `btnRebajar_Click`, debido a que representa el proceso m·s crÌtico del sistema: descontar consumo sin permitir unidades incompatibles ni cantidades superiores al stock.
+**Figura 12. Rebaja de stock con conversi√≥n de unidades y validaci√≥n de existencia.**  
+Se recomienda utilizar el fragmento de `btnRebajar_Click`, debido a que representa el proceso m√°s cr√≠tico del sistema: descontar consumo sin permitir unidades incompatibles ni cantidades superiores al stock.
 
-**Figura 13. Filtro de b˙squeda mediante arreglo en memoria.**  
-Se recomienda utilizar el bloque de `txtBuscar_Change`, ya que evidencia una tÈcnica de optimizaciÛn para filtrar registros por ID o nombre sin recorrer visualmente toda la hoja.
+**Figura 13. Filtro de b√∫squeda mediante arreglo en memoria.**  
+Se recomienda utilizar el bloque de `txtBuscar_Change`, ya que evidencia una t√©cnica de optimizaci√≥n para filtrar registros por ID o nombre sin recorrer visualmente toda la hoja.
 
 ### Sugerencia de captura de pantalla
 
-Se recomienda tomar una captura de pantalla del formulario `INVENTARIOCRUD` despuÈs de seleccionar un reactivo en el `ListBox`, cuando los campos del formulario aparecen llenos y el indicador de estado muestra si el reactivo est· disponible, prÛximo a vencer, vencido o con stock bajo. Esta captura permitirÌa evidenciar la interfaz principal, la consulta del inventario y la alerta visual para control de calidad.
+Se recomienda tomar una captura de pantalla del formulario `INVENTARIOCRUD` despu√©s de seleccionar un reactivo en el `ListBox`, cuando los campos del formulario aparecen llenos y el indicador de estado muestra si el reactivo est√° disponible, pr√≥ximo a vencer, vencido o con stock bajo. Esta captura permitir√≠a evidenciar la interfaz principal, la consulta del inventario y la alerta visual para control de calidad.
 
-Como segunda evidencia visual, se sugiere capturar el momento de generaciÛn del reporte, especÌficamente cuando el sistema pregunta si se desea guardar como PDF o Excel. Esta imagen demostrarÌa la capacidad del sistema para convertir la informaciÛn operativa en un documento ˙til para seguimiento administrativo.
+Como segunda evidencia visual, se sugiere capturar el momento de generaci√≥n del reporte, espec√≠ficamente cuando el sistema pregunta si se desea guardar como PDF o Excel. Esta imagen demostrar√≠a la capacidad del sistema para convertir la informaci√≥n operativa en un documento √∫til para seguimiento administrativo.
